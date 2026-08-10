@@ -2,7 +2,7 @@
 
 **[The live dashboard on Tableau Public →](https://public.tableau.com/views/socialmediaadsperformancedashboard/Dashboard1)**
 
-![Dashboard screenshot](../images/dashboard_screenshot.png)
+![Dashboard screenshot](images/dashboard_screenshot.png)
 
 Dataset: [Social Media Advertisement Performance](https://www.kaggle.com/datasets/alperenmyung/social-media-advertisement-performance) (Kaggle), a synthetic but realistic event log covering ~400K interactions across 200 ads, 50 different campaigns, and 10,000 users.
 
@@ -17,7 +17,7 @@ Built to help provide answers when determining a budget for different social ad 
 
 ## Data Cleaning & Prep
 
-Full detail in the [cleaning notebook](../notebook/01_data_cleaning.ipynb). In short:
+Full detail in the [cleaning notebook](notebook/01_data_cleaning.ipynb). In short:
 
 - **Referential integrity check** — confirmed every `ad_id`, `user_id`, and `campaign_id` in the event log actually matched a record in its parent table before joining.
 - **Duplicates** — found and dropped 50 duplicate `user_id` rows in the users table.
