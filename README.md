@@ -17,7 +17,7 @@ Built to help provide answers when determining a budget for different social ad 
 
 ## Data Cleaning & Prep
 
-Full detail in the [cleaning notebook](notebooks/01_data_cleaning.ipynb). In short:
+Full detail in the [cleaning notebook](../notebook/01_data_cleaning.ipynb). In short:
 
 - **Referential integrity check** — confirmed every `ad_id`, `user_id`, and `campaign_id` in the event log actually matched a record in its parent table before joining.
 - **Duplicates** — found and dropped 50 duplicate `user_id` rows in the users table.
@@ -64,6 +64,9 @@ Full detail in the [cleaning notebook](notebooks/01_data_cleaning.ipynb). In sho
 └── dashboard/
     └── social_media_ad_performance_dashboard.twbx
 ```
+
+**Note:** `data/events_master.csv` (~400K rows) is excluded from this repo due to file size. 
+It's fully reproducible by running `notebooks/01_data_cleaning.ipynb` against the raw source files.
 
 ## Tools
 Python (pandas) for cleaning, joining, and building the funnel/summary tables. Tableau for the dashboard itself.
